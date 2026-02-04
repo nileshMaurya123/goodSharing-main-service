@@ -1,0 +1,32 @@
+Query to run
+
+mutation CreatePost($title: String!, $category: PostCategory!, $description: String!) {
+  createPost(title: $title, category: $category, description: $description) {
+    id
+    title
+    category
+    description
+    isDeleted
+    createdAt
+    updatedAt
+    user {
+      id
+      email
+      name
+    }
+  }
+}
+
+In variables I have to pass
+
+{
+  "title": "JK Rowling",
+  "category": "BOOK",
+  "description": "Test1"
+}
+
+In headers I have to pass
+
+Tick box before Authorization
+Authorization - 1st Box 
+2nd Box - Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE2IiwiZW1haWwiOiJuaWxlc2g3ODc0QGdtYWlsLmNvbSIsImlhdCI6MTc2ODg4NTU1MywiZXhwIjoxNzY4OTcxOTUzfQ.KbOvNqwssJvzVzDdGGe5ZtjwhJ3DsAMGwH--58vB2mg
